@@ -9,4 +9,14 @@ class Game {
         this.activePhrase = null;
     }
 
+    /**
+     * Creates phrases for use in game
+     * @return {array} An array of phrases that could be used in the game
+     */
+
+    createPhrases() {
+        phrases = [];
+
+        
+    }
 }
