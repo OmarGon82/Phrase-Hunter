@@ -24,6 +24,7 @@ class Game {
         ];
         return phrases
     }
+
     /**
     * Selects random phrase from phrases property
     * @return {Object} Phrase object chosen to be used
