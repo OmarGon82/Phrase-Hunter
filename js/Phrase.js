@@ -10,6 +10,21 @@ class Phrase {
     * Display phrase on game board
     */
     addPhraseToDisplay() {
+        const ul = document.getElementById("phrase");
+        const li = document.createElement('li');
+        ul.append(li);
+        const splitPhrase = this.phrase.split("");
+
+        splitPhrase.forEach( letter => {
+            console.log(letter)
+            if (letter === " ") {   
+                li.classList.add("space");
+            } else {
+                li.style.display = "none"        
+            }
+            
+        });
 
     }
 }
+
