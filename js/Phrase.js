@@ -13,7 +13,6 @@ class Phrase {
         const ul = document.getElementById("phrase");
         const splitPhrase = this.phrase.split("");
         splitPhrase.forEach( letter => {
-            console.log(letter)
             const li = document.createElement('li');
             ul.append(li);
             if (letter === " ") {   
@@ -23,9 +22,7 @@ class Phrase {
                 li.classList.add(`hide-letter-${letter}`);
             }
         });
-
     }
-       
-
 }
+
 
