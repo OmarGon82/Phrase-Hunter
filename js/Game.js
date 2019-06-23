@@ -6,7 +6,7 @@ class Game {
     constructor() {
         this.missed = 0;
         this.phrases = this.createPhrases();
-        this.activePhrase = this.phrases;
+        this.activePhrase = null;
     }
 
     /**
@@ -30,7 +30,7 @@ class Game {
     * @return {Object} Phrase object chosen to be used
     */
     getRandomPhrase() {
-        const randomNum = Math.floor(Math.random() * this.phrases.length )
+        const randomNum = Math.floor(Math.random() * this.phrases.length)
         return this.phrases[randomNum];
     }
 
@@ -39,7 +39,9 @@ class Game {
     */  
     startGame() {
         document.getElementById("overlay").style.display = "none";
-        this.getRandomPhrase().addPhraseToDisplay();
+        const randomPhrase =  this.getRandomPhrase()
+        randomPhrase.addPhraseToDisplay()
+         this.activePhrase =  randomPhrase;
     }
 
 }
