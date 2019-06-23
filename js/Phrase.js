@@ -19,7 +19,7 @@ class Phrase {
                li.classList.add("space");
             } else {
                 li.innerHTML = letter;       
-                li.classList.add(`hide-letter-${letter}`);
+                li.classList.add(`letter`);
             }
         });
     }
