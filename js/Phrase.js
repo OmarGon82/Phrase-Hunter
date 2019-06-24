@@ -19,7 +19,7 @@ class Phrase {
                li.classList.add("space");
             } else {
                 li.innerHTML = letter;       
-                li.classList.add('letter');
+                li.classList.add('letter',`${letter}`);
             }
         });
     }
@@ -42,7 +42,9 @@ class Phrase {
     * @param (string) letter - Letter to display
     */
     showMatchedLetter(letter) {
-         
+         if(letter) {
+
+         }
     };
 }
 
