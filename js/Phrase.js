@@ -44,7 +44,6 @@ class Phrase {
     showMatchedLetter(letter) {
          if(this.checkLetter(letter) === true) {
          document.querySelectorAll(`.${letter}`).forEach(li =>  li.classList.add('show'))
-
         }
     };
 }
