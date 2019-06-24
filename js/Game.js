@@ -1,3 +1,4 @@
+
 /* Treehouse FSJS Techdegree
  * Project 4 - OOP Game App
  * Game.js */
@@ -41,7 +42,7 @@ class Game {
         document.getElementById("overlay").style.display = "none";
         const randomPhrase =  this.getRandomPhrase()
         randomPhrase.addPhraseToDisplay()
-         this.activePhrase =  randomPhrase;
+        this.activePhrase =  randomPhrase;
     }
 
 }
