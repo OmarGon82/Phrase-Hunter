@@ -45,4 +45,19 @@ class Game {
         this.activePhrase =  randomPhrase;
     }
 
+    /**
+    * Checks for winning move
+    * @return {boolean} True if game has been won, false if game wasn't won
+    */
+    checkForWin() {
+       const showLis = document.querySelectorAll('.show');
+       const letterLis = document.querySelectorAll('.letter')
+       if(showLis.length === letterLis.length) {
+           return true;
+       } else {
+           return false;
+       }
+    };
+
+
 }

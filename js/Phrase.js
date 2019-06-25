@@ -42,7 +42,7 @@ class Phrase {
     * @param (string) letter - Letter to display
     */
     showMatchedLetter(letter) {
-         if(this.checkLetter(letter) === true) {
+         if(this.checkLetter(letter)) {
          document.querySelectorAll(`.${letter}`).forEach(li =>  li.classList.add('show'))
         }
     };
