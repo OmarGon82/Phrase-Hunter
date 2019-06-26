@@ -59,5 +59,26 @@ class Game {
        }
     };
 
+    /**
+    * Increases the value of the missed property
+    * Removes a life from the scoreboard
+    * Checks if player has remaining lives and ends game if player is out
+    */
+    removeLife() {
+    const hearts = document.querySelectorAll('img');
+    
+    if( this.missed > 5){
+        for(let i = 0; i < hearts.length; i++){
+           const heart = hearts[i]
+            // hearts[i].src = "images/lostHeart.png"
+            console.log(heart)
+        }
+    
+    this.missed += 1
+    }
+    
+
+    };
+
 
 }
