@@ -66,19 +66,14 @@ class Game {
     */
     removeLife() {
     const hearts = document.querySelectorAll('img');
-    
-    if( this.missed > 5){
-        for(let i = 0; i < hearts.length; i++){
-           const heart = hearts[i]
-            // hearts[i].src = "images/lostHeart.png"
-            console.log(heart)
-        }
-    
-    this.missed += 1
-    }
+        hearts[this.missed].src = "images/lostHeart.png";
+        this.missed += 1;
+    };
     
 
-    };
+
+    
+
 
 
 }
