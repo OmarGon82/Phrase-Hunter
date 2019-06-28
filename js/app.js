@@ -6,10 +6,6 @@ document.getElementById("btn__reset").addEventListener('click', function() {
     game.startGame();
 })
 
-/**
-* Handles onscreen keyboard button clicks
-* @param (HTMLButtonElement) button - The clicked button element
-*/
-handleInteraction(button) {
-    console.log(button);
-    };
+document.getElementById('qwerty').addEventListener('click', function(event) {
+    game.handleInteraction(event.target)
+})

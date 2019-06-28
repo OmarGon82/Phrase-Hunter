@@ -45,18 +45,19 @@ class Game {
         this.activePhrase =  randomPhrase;
     }
 
+
     /**
     * Checks for winning move
     * @return {boolean} True if game has been won, false if game wasn't won
     */
     checkForWin() {
-       const showLis = document.querySelectorAll('.show');
-       const letterLis = document.querySelectorAll('.letter')
-       if(showLis.length === letterLis.length) {
-           return true;
-       } else {
-           return false;
-       }
+        const showLis = document.querySelectorAll('.show');
+        const letterLis = document.querySelectorAll('.letter')
+        if(showLis.length === letterLis.length) {
+            return true;
+        } else {
+            return false;
+        }
     };
 
     /**
@@ -69,7 +70,7 @@ class Game {
         hearts[this.missed].src = "images/lostHeart.png";
         this.missed += 1;
     };
-    
+
     /**
     * Displays game over message
     * @param {boolean} gameWon - Whether or not the user won the game
@@ -92,8 +93,13 @@ class Game {
         
     };
 
-    
 
-
+    /**
+    * Handles onscreen keyboard button clicks
+    * @param (HTMLButtonElement) button - The clicked button element
+    */
+    handleInteraction(button) {
+    console.log(button);
+    };
 
 }
