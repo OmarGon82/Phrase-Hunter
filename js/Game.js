@@ -70,7 +70,27 @@ class Game {
         this.missed += 1;
     };
     
+    /**
+    * Displays game over message
+    * @param {boolean} gameWon - Whether or not the user won the game
+    */
+    gameOver(gameWon) {
+        const overlay = document.getElementById("overlay")
+        const h1 = document.getElementById("game-over-message")
+        overlay.style.display = "block";
+    if(gameWon) {
+        overlay.classList.remove("start")
+        overlay.classList.add("win");
+        h1.innerHTML = "Congratulations! You Win!";
+    } 
+    if(this.missed === 5 ){
+        overlay.classList.remove("start")
+        overlay.classList.add("lose");
+        h1.innerHTML = "Sorry, Better luck next time!"
 
+    }
+        
+    };
 
     
 
