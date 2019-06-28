@@ -81,12 +81,12 @@ class Game {
     if(gameWon) {
         overlay.classList.remove("start")
         overlay.classList.add("win");
-        h1.innerHTML = "Congratulations! You Win!";
+        h1.innerHTML = "Your skills were no match for this challange. You win!";
     } 
     if(this.missed === 5 ){
         overlay.classList.remove("start")
         overlay.classList.add("lose");
-        h1.innerHTML = "Sorry, Better luck next time!"
+        h1.innerHTML = "Sharpen your hunting skills and try again!"
 
     }
         
