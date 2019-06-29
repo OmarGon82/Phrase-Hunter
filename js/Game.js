@@ -100,6 +100,7 @@ class Game {
     */
     handleInteraction(button) {
     console.log(button);
+    
     };
 
 }
