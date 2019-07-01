@@ -99,23 +99,18 @@ class Game {
     * @param (HTMLButtonElement) button - The clicked button element
     */
     handleInteraction(button) {
-    // console.log(button);
-    let keys = document.getElementsByClassName("key");
+        const letter = button.textContent;
 
-    for (let i = 0; i < keys.length; i++) {
-        const letter = keys[i].textContent
-        if(letter === button.textContent) {
-            button.disabled = true;
-            button.style.border = '2px solid firebrick';
-            console.log(game.activePhrase.checkLetter(button.textContent))
-        }
+    if(this.activePhrase.checkLetter(letter)) {
+        button.disabled = true;
+        // button.style.border = '2px solid firebrick';
+        button.classList.add("chosen")
+        this.activePhrase.showMatchedLetter(letter)
+        
+    } else {
+        button.classList.add("wrong")
     }
-
-
-    
-    
     
     };
 }
 
-// console.log(game.activePhrase.checkLetter(button))
