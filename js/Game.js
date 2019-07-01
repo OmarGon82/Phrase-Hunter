@@ -99,7 +99,9 @@ class Game {
     * @param (HTMLButtonElement) button - The clicked button element
     */
     handleInteraction(button) {
-    console.log(button);
+    // console.log(button);
+    console.log(activePhrase.checkLetter(button))
+    
     
     };
 
