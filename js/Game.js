@@ -69,6 +69,9 @@ class Game {
     const hearts = document.querySelectorAll('img');
         hearts[this.missed].src = "images/lostHeart.png";
         this.missed += 1;
+        if(this.missed === 5) {
+            this.gameOver(false)
+        }
     };
 
     /**
@@ -104,12 +107,19 @@ class Game {
     if(this.activePhrase.checkLetter(letter)) {
         button.disabled = true;
         // button.style.border = '2px solid firebrick';
-        button.classList.add("chosen")
-        this.activePhrase.showMatchedLetter(letter)
+        button.classList.add("chosen");
+        this.activePhrase.showMatchedLetter(letter);
+        this.checkForWin()
         
     } else {
-        button.classList.add("wrong")
+        button.classList.add("wrong");
+        this.removeLife()
+
     }
+
+    if(this.checkForWin()) {
+        this.gameOver(true)
+    } 
     
     };
 }
