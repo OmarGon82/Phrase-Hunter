@@ -100,9 +100,17 @@ class Game {
     */
     handleInteraction(button) {
     // console.log(button);
-    console.log(activePhrase.checkLetter(button))
+    let keys = document.getElementsByClassName("key");
+
+    for (let i = 0; i < keys.length; i++) {
+        const letter = keys[i].textContent
+        console.log(letter)//gives me all the letters.
+        // console.log(game.activePhrase.checkLetter(letter))
+    }
+
+
+    
     
     
     };
-
 }
