@@ -104,8 +104,11 @@ class Game {
 
     for (let i = 0; i < keys.length; i++) {
         const letter = keys[i].textContent
-        console.log(letter)//gives me all the letters.
-        // console.log(game.activePhrase.checkLetter(letter))
+        if(letter === button.textContent) {
+            button.disabled = true;
+            button.style.border = '2px solid firebrick';
+            console.log(game.activePhrase.checkLetter(button.textContent))
+        }
     }
 
 
@@ -114,3 +117,5 @@ class Game {
     
     };
 }
+
+// console.log(game.activePhrase.checkLetter(button))
