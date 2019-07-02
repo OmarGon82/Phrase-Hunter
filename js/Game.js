@@ -1,8 +1,4 @@
 
-/* Treehouse FSJS Techdegree
- * Project 4 - OOP Game App
- * Game.js */
-
 class Game {
     constructor() {
         this.missed = 0;
@@ -86,13 +82,13 @@ class Game {
         overlay.classList.remove("start")
         overlay.classList.add("win");
         h1.innerHTML = "Your skills were no match for this challange. You win!";
-    } 
+        } 
     if(this.missed === 5 ){
         overlay.classList.remove("start")
         overlay.classList.add("lose");
         h1.innerHTML = "Sharpen your hunting skills and try again!"
 
-    }
+        }
         
     };
 
@@ -104,22 +100,22 @@ class Game {
     handleInteraction(button) {
         const letter = button.textContent;
 
-    if(this.activePhrase.checkLetter(letter)) {
-        button.disabled = true;
-        // button.style.border = '2px solid firebrick';
-        button.classList.add("chosen");
-        this.activePhrase.showMatchedLetter(letter);
-        this.checkForWin()
+        if(this.activePhrase.checkLetter(letter)) {
+            button.disabled = true;
+            // button.style.border = '2px solid firebrick';
+            button.classList.add("chosen");
+            this.activePhrase.showMatchedLetter(letter);
+            this.checkForWin()
         
-    } else {
-        button.classList.add("wrong");
-        this.removeLife()
+        } else {
+            button.classList.add("wrong");
+            this.removeLife()
 
-    }
+        }
 
-    if(this.checkForWin()) {
+        if(this.checkForWin()) {
         this.gameOver(true)
-    } 
+        } 
     
     };
 
@@ -136,7 +132,7 @@ class Game {
     }
 
     /**
-     * resets the overlay to the start game
+     * removes the win or lose overlay
      */
     resetOverlay() {
     const overlay = document.getElementById("overlay");

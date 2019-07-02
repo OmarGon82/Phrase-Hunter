@@ -11,7 +11,7 @@ document.getElementById('qwerty').addEventListener('click', function(event) {
     
  if(e.className === "key"){
     game.handleInteraction(e)
-    } 
+    }; 
 })
 
 
@@ -20,7 +20,7 @@ document.getElementById("btn__reset").addEventListener('click', function() {
         game.resetKeyboard();
         game.resetOverlay();
         game.resetLife();
-    }
+    };
 }) 
     
     
