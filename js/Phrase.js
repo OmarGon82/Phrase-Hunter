@@ -11,6 +11,7 @@ class Phrase {
     */
     addPhraseToDisplay() {
         const ul = document.getElementById("phrase");
+        ul.innerHTML = "";
         const splitPhrase = this.phrase.split("");
         splitPhrase.forEach( letter => {
             const li = document.createElement('li');

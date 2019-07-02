@@ -122,5 +122,34 @@ class Game {
     } 
     
     };
+
+    /** 
+     * Resets keyboard. Removes 'chosen' or 'wrong' class.
+     * enables all buttons
+     */
+    resetKeyboard() {
+       const keys = document.getElementsByClassName("key");
+       for(let i = 0; i < keys.length; i++) {
+           keys[i].classList.remove("wrong", "chosen");
+           keys[i].disabled = false;
+       }
+    }
+
+    /**
+     * resets the overlay to the start game
+     */
+    resetOverlay() {
+    const overlay = document.getElementById("overlay");
+    overlay.classList.remove("win", "lose");
+    overlay.classList.add("start");
+    document.querySelector("h1").innerHTML = "";
+    }
+
+    resetLife() {
+        const hearts = document.querySelectorAll('img');
+        for(let i = 0;i < hearts.length;i++) {
+            hearts[i].src = "images/liveHeart.png";
+        }
+    };
 }
 
