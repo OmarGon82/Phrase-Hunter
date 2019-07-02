@@ -140,7 +140,9 @@ class Game {
     overlay.classList.add("start");
     document.querySelector("h1").innerHTML = "";
     }
-
+    /**
+     * Resets the hearts back to 5.
+     */
     resetLife() {
         const hearts = document.querySelectorAll('img');
         hearts.forEach(heart => {
