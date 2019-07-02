@@ -147,9 +147,9 @@ class Game {
 
     resetLife() {
         const hearts = document.querySelectorAll('img');
-        for(let i = 0;i < hearts.length;i++) {
-            hearts[i].src = "images/liveHeart.png";
-        }
+        hearts.forEach(heart => {
+            heart.src = "images/liveHeart.png"
+        })
     };
 }
 
