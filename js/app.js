@@ -8,10 +8,11 @@ document.getElementById("btn__reset").addEventListener('click', function() {
 
 document.getElementById('qwerty').addEventListener('click', function(event) {
     const e = event.target;
-    
- if(e.className === "key"){
+    console.log(e)
+ if(e.className === "key"  ){
     game.handleInteraction(e)
-    }; 
+    };
+
 })
 
 
@@ -22,9 +23,17 @@ document.getElementById("btn__reset").addEventListener('click', function() {
         game.resetLife();
     };
 }) 
-    
-    
-        
-    
+
+
+document.addEventListener('keydown', function(event){
+const key = event.key
+console.log(event.keyCode)
+    if(game.activePhrase.checkLetter(key)) {
+        game.handleInteraction()
+    }
+});
+
+
+
     
 

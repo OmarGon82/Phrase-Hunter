@@ -108,6 +108,7 @@ class Game {
             this.checkForWin()
         
         } else {
+            button.disabled = true;
             button.classList.add("wrong");
             this.removeLife()
 
