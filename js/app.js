@@ -3,17 +3,20 @@ let game;
 
 document.getElementById("btn__reset").addEventListener('click', function() {
     game = new Game();
-    game.startGame();
+    game.startGame(); 
 })
 
 document.getElementById('qwerty').addEventListener('click', function(event) {
     const e = event.target;
-    console.log(e)
- if(e.className === "key"  ){
-    game.handleInteraction(e)
-    };
-
+    if(e.className === "key"){
+       game.handleInteraction(e)
+    };   
 })
+    
+/**
+ * Event listener for the start game button to reset the game
+ * If the game is won or lost it will reset keyboard,overlay and lifes
+ */   
 
 
 document.getElementById("btn__reset").addEventListener('click', function() {
@@ -22,18 +25,28 @@ document.getElementById("btn__reset").addEventListener('click', function() {
         game.resetOverlay();
         game.resetLife();
     };
+    
 }) 
 
+/**
+ * Event listern for keyboard input.
+ * Checks if the key pressed is a valid letter and then fires the click event for the virtual 
+ * keyboard. 
+ */
 
 document.addEventListener('keydown', function(event){
-const key = event.key
-console.log(event.keyCode)
-    if(game.activePhrase.checkLetter(key)) {
-        game.handleInteraction()
-    }
-});
-
-
-
+    const keyPressed = event.key.toLowerCase();
+    const validLetters = "abcdefghijklmnopqrstuvwxyz";
+    const allKeys = document.getElementsByClassName("key");
     
+    if(validLetters.includes(keyPressed)) {
+        for(let key of allKeys) {
+            if(key.innerText == keyPressed) {
+                key.click();
+            }
+        }
+    }   
+    });
+
+
 

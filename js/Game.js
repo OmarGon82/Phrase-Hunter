@@ -82,14 +82,13 @@ class Game {
         overlay.classList.remove("start")
         overlay.classList.add("win");
         h1.innerHTML = "Your skills were no match for this challange. You win!";
-        } 
+        // document.body.style.background = "url('../GOPR4968.JPG')";
+    }
     if(this.missed === 5 ){
         overlay.classList.remove("start")
         overlay.classList.add("lose");
         h1.innerHTML = "Sharpen your hunting skills and try again!"
-
         }
-        
     };
 
 
@@ -102,12 +101,14 @@ class Game {
 
         if(this.activePhrase.checkLetter(letter)) {
             button.disabled = true;
-            // button.style.border = '2px solid firebrick';
+            button.style.border = '2px solid green';
+            button.style.background = "lightgreen"
             button.classList.add("chosen");
             this.activePhrase.showMatchedLetter(letter);
             this.checkForWin()
         
         } else {
+            button.style.border = '2px solid firebrick';
             button.disabled = true;
             button.classList.add("wrong");
             this.removeLife()
@@ -129,6 +130,8 @@ class Game {
        for(let i = 0; i < keys.length; i++) {
            keys[i].classList.remove("wrong", "chosen");
            keys[i].disabled = false;
+           keys[i].style.background = "";
+           keys[i].style.border = "";
        }
     }
 
