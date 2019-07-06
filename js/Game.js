@@ -81,13 +81,14 @@ class Game {
         overlay.style.display = "block";
     if(gameWon) {
         overlay.classList.remove("start")
-        // overlay.classList.add("win");
-        document.body.style.background = "url('images/gameWon.jpg')";
+        overlay.classList.add("win");
+        // overlay.style.opacity = 0.3;
+        // document.body.style.background = "url('images/gameWon.jpg')";
         h1.innerHTML = "Your skills were no match for this challange. You win!";
     }
     if(this.missed === 5 ){
         overlay.classList.remove("start")
-        // overlay.classList.add("lose");
+        overlay.classList.add("lose");
         document.body.style.background = "url('images/gameOver.jpg')";
         h1.innerHTML = "Sharpen your hunting skills and try again!"
         }

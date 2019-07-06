@@ -49,13 +49,5 @@ document.addEventListener('keydown', function(event){
     });
 
 
-// document.body.style.background = "url('images/startGame.jpg')";// Sets the background image
-// const setBackground = (image) => {
-//     document.body.style.background = "url('images/startGame.jpg')";
-//   };
-//   if (isWeekend) {
-//     setBackground('nature');
-//   } else {
-//     setBackground('pencils');
-//   }
+
 
