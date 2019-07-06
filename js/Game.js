@@ -82,7 +82,8 @@ class Game {
         overlay.classList.remove("start")
         overlay.classList.add("win");
         h1.innerHTML = "Your skills were no match for this challange. You win!";
-        // document.body.style.background = "url('../GOPR4968.JPG')";
+        // overlay.style.display = ""
+        // document.body.style.background = "url('images/tropical-rainforest-jungle.jpg')";
     }
     if(this.missed === 5 ){
         overlay.classList.remove("start")

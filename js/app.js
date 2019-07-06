@@ -49,4 +49,5 @@ document.addEventListener('keydown', function(event){
     });
 
 
+// document.body.style.background = "url('images/startGame.jpg')";
 
