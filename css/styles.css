@@ -179,8 +179,9 @@ button {
   color: #FFF;
 }
 
-.start {
+/* .start {
   background-color: #3a3f58;
+  background-image: "url('images/startGame')"
 }
 
 .start a {
@@ -188,17 +189,32 @@ button {
 }
 
 .win {
-  background-color: var(--color-win);
-}
+  /* background-color: var(--color-win); */
+  /* background-image: "url('images/gameWon.jpg')"
+} */
 
-.win a {
+/* .win a {
   color: var(--color-win);
 }
 
 .lose {
   background-color: #f5785f;
+  background-image: "url('images/gameOver.jpg')"
 }
 
 .lose a {
   color: var(--color-lose);
+} */ 
+
+.start {
+  background-image: url('../images/startGame.jpg');
+}
+.win {
+  background-image: url('../images/gameWon.jpg');
+}
+.lose {
+  background-image: url('../images/gameOver.jpg');
+}
+.body {
+  background-image: url('../images/inGame.jpg');
 }

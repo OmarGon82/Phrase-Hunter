@@ -78,18 +78,15 @@ class Game {
     gameOver(gameWon) {
         const overlay = document.getElementById("overlay")
         const h1 = document.getElementById("game-over-message")
-        overlay.style.display = "block";
+        overlay.style.display = "";
     if(gameWon) {
-        overlay.classList.remove("start")
-        overlay.classList.add("win");
-        // overlay.style.opacity = 0.3;
-        // document.body.style.background = "url('images/gameWon.jpg')";
+        // overlay.className = "start"
+        overlay.className =  "win";
         h1.innerHTML = "Your skills were no match for this challange. You win!";
     }
     if(this.missed === 5 ){
-        overlay.classList.remove("start")
-        overlay.classList.add("lose");
-        document.body.style.background = "url('images/gameOver.jpg')";
+        // overlay.classList.remove("start")
+        overlay.className =  "lose";
         h1.innerHTML = "Sharpen your hunting skills and try again!"
         }
     };
@@ -106,14 +103,14 @@ class Game {
             button.disabled = true;
             button.style.border = '2px solid green';
             button.style.background = "lightgreen"
-            button.classList.add("chosen");
+            button.className = "chosen";
             this.activePhrase.showMatchedLetter(letter);
             this.checkForWin()
         
         } else {
             button.style.border = '2px solid firebrick';
             button.disabled = true;
-            button.classList.add("wrong");
+            button.className = "wrong";
             this.removeLife()
 
         }
@@ -129,14 +126,14 @@ class Game {
      * enables all buttons
      */
     resetKeyboard() {
-       const keys = document.getElementsByClassName("key");
-       for(let i = 0; i < keys.length; i++) {
-           keys[i].classList.remove("wrong", "chosen");
-           keys[i].disabled = false;
-           keys[i].style.background = "";
-           keys[i].style.border = "";
-       }
-    }
+        const keys = document.getElementsByClassName("key");
+        for(let i = 0; i < keys.length; i++) {
+            keys[i].classList.remove("wrong", "chosen");
+            keys[i].disabled = false;
+            keys[i].style.background = "";
+            keys[i].style.border = "";
+        }
+     }
 
     /**
      * removes the win or lose overlay
