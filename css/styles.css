@@ -191,7 +191,7 @@ button {
 .start {
   background-image: url('../images/startGame.jpg');
   background-repeat: no-repeat;
-  background-position: 100% 100%;
+  background-size: cover;
 }
 .start a {
   color: #fff;
@@ -199,7 +199,7 @@ button {
 .win {
   background-image: url('../images/gameWon.jpg');
   background-repeat: no-repeat;
-  background-position: 100% 100%;
+  background-size: cover;
 }
 .win a {
   color: var(--color-win);
@@ -207,7 +207,7 @@ button {
 .lose {
   background-image: url('../images/gameOver2.jpg');
   background-repeat: no-repeat;
-  background-position: 100% 100%;
+  background-size: cover;
 }
 .lose a {
   color: var(--color-lose);
@@ -215,5 +215,5 @@ button {
 .body {
   background-image: url('../images/inGame.jpg');
   background-repeat: no-repeat;
-  background-position: 100% 100%;
+  background-size: cover;
 }
