@@ -1,11 +1,18 @@
 
 let game;
 
+/**
+ * Event listner for the start game button. To start a new game
+ */
 document.getElementById("btn__reset").addEventListener('click', function() {
     game = new Game();
     game.startGame(); 
 })
 
+/**
+ * Event listner for the on screen keyboard.
+ * It class the handleInteraction function.
+ */
 document.getElementById('qwerty').addEventListener('click', function(event) {
     const e = event.target;
     if(e.className === "key"){
@@ -17,8 +24,6 @@ document.getElementById('qwerty').addEventListener('click', function(event) {
  * Event listener for the start game button to reset the game
  * If the game is won or lost it will reset keyboard,overlay and lifes
  */   
-
-
 document.getElementById("btn__reset").addEventListener('click', function() {
     if(overlay.className === "lose" || overlay.className === "win") {
         game.resetKeyboard();
@@ -47,6 +52,8 @@ document.addEventListener('keydown', function(event){
         }
     }   
     });
+
+
 
 
 

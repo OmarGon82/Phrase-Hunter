@@ -40,10 +40,16 @@ h2 {
   text-transform: uppercase;
   font-size: var(--font-size-large);
   margin: 0;
+  background: -webkit-linear-gradient(black,red);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 h1 {
   font-size: 30px;
+  background: -webkit-linear-gradient(black,red);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 button {
@@ -86,7 +92,10 @@ button {
 /* Title */
 
 .header {
-  color: #3a3f58;
+  /* color: black; */
+    background: -webkit-linear-gradient(black,red);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 
@@ -179,35 +188,9 @@ button {
   color: #FFF;
 }
 
-/* .start {
-  background-color: #3a3f58;
-  background-image: "url('images/startGame')"
-}
-
-.start a {
-  color: #fff;
-}
-
-.win {
-  /* background-color: var(--color-win); */
-  /* background-image: "url('images/gameWon.jpg')"
-} */
-
-/* .win a {
-  color: var(--color-win);
-}
-
-.lose {
-  background-color: #f5785f;
-  background-image: "url('images/gameOver.jpg')"
-}
-
-.lose a {
-  color: var(--color-lose);
-} */ 
-
 .start {
   background-image: url('../images/startGame.jpg');
+
 }
 .start a {
   color: #fff;
@@ -219,7 +202,7 @@ button {
   color: var(--color-win);
 }
 .lose {
-  background-image: url('../images/gameOver.jpg');
+  background-image: url('../images/gameOver2.jpg');
 }
 .lose a {
   color: var(--color-lose);

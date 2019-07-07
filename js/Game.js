@@ -80,12 +80,10 @@ class Game {
         const h1 = document.getElementById("game-over-message")
         overlay.style.display = "";
     if(gameWon) {
-        // overlay.className = "start"
         overlay.className =  "win";
         h1.innerHTML = "Your skills were no match for this challange. You win!";
     }
     if(this.missed === 5 ){
-        // overlay.classList.remove("start")
         overlay.className =  "lose";
         h1.innerHTML = "Sharpen your hunting skills and try again!"
         }
@@ -103,14 +101,14 @@ class Game {
             button.disabled = true;
             button.style.border = '2px solid green';
             button.style.background = "lightgreen"
-            button.className = "chosen";
+            button.classList.add("chosen");
             this.activePhrase.showMatchedLetter(letter);
             this.checkForWin()
         
         } else {
             button.style.border = '2px solid firebrick';
             button.disabled = true;
-            button.className = "wrong";
+            button.classList.add("wrong");
             this.removeLife()
 
         }
@@ -126,8 +124,9 @@ class Game {
      * enables all buttons
      */
     resetKeyboard() {
-        const keys = document.getElementsByClassName("keys");
+        const keys = document.getElementsByClassName("key");
         for(let i = 0; i < keys.length; i++) {
+            console.log(keys[i])
             keys[i].className = "key"
             keys[i].disabled = false;
             keys[i].style.background = "";
