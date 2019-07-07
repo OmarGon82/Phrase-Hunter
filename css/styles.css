@@ -190,23 +190,30 @@ button {
 
 .start {
   background-image: url('../images/startGame.jpg');
-
+  background-repeat: no-repeat;
+  background-position: 100% 100%;
 }
 .start a {
   color: #fff;
 }
 .win {
   background-image: url('../images/gameWon.jpg');
+  background-repeat: no-repeat;
+  background-position: 100% 100%;
 }
 .win a {
   color: var(--color-win);
 }
 .lose {
   background-image: url('../images/gameOver2.jpg');
+  background-repeat: no-repeat;
+  background-position: 100% 100%;
 }
 .lose a {
   color: var(--color-lose);
 } 
 .body {
   background-image: url('../images/inGame.jpg');
+  background-repeat: no-repeat;
+  background-position: 100% 100%;
 }
