@@ -121,16 +121,15 @@ class Game {
 
     /** 
      * Resets keyboard. Removes 'chosen' or 'wrong' class.
-     * enables all buttons
+     * Enables all buttons again.
      */
     resetKeyboard() {
         const keys = document.getElementsByClassName("key");
-        for(let i = 0; i < keys.length; i++) {
-            console.log(keys[i])
-            keys[i].className = "key"
-            keys[i].disabled = false;
-            keys[i].style.background = "";
-            keys[i].style.border = "";
+        for(let key of keys) {
+            key.className = "key";
+            key.disabled = false;
+            key.style.background = "";
+            key.style.border= "";
         }
      }
 
@@ -151,7 +150,7 @@ class Game {
             heart.src = "images/liveHeart.png"
         })
     };
-
-
 }
+
+
 
