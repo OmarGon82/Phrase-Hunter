@@ -126,9 +126,9 @@ class Game {
      * enables all buttons
      */
     resetKeyboard() {
-        const keys = document.getElementsByClassName("key");
+        const keys = document.getElementsByClassName("keys");
         for(let i = 0; i < keys.length; i++) {
-            keys[i].classList.remove("wrong", "chosen");
+            keys[i].className = "key"
             keys[i].disabled = false;
             keys[i].style.background = "";
             keys[i].style.border = "";
@@ -140,8 +140,7 @@ class Game {
      */
     resetOverlay() {
     const overlay = document.getElementById("overlay");
-    overlay.classList.remove("win", "lose");
-    overlay.classList.add("start");
+    overlay.className = "start";
     document.querySelector("h1").innerHTML = "";
     }
     /**

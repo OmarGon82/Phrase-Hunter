@@ -209,12 +209,21 @@ button {
 .start {
   background-image: url('../images/startGame.jpg');
 }
+.start a {
+  color: #fff;
+}
 .win {
   background-image: url('../images/gameWon.jpg');
+}
+.win a {
+  color: var(--color-win);
 }
 .lose {
   background-image: url('../images/gameOver.jpg');
 }
+.lose a {
+  color: var(--color-lose);
+} 
 .body {
   background-image: url('../images/inGame.jpg');
 }
