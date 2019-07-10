@@ -93,6 +93,8 @@ class Game {
     /**
     * Handles onscreen keyboard button clicks
     * @param (HTMLButtonElement) button - The clicked button element
+    * added a green border with a light green background for correct keys
+    * and a solid red border for wrong gueses.
     */
     handleInteraction(button) {
         const letter = button.textContent;
