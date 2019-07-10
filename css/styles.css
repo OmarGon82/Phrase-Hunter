@@ -34,7 +34,7 @@ li, ol, ul {
   padding: 0;
   display: inline-block;
 }
-
+/* Changed the h2 text to a gradient from black to red*/
 h2 {
   margin: 0;
   text-transform: uppercase;
@@ -44,7 +44,7 @@ h2 {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-
+/* Changed the h1 text to a gradient black to red */
 h1 {
   font-size: 30px;
   background: -webkit-linear-gradient(black,red);
@@ -90,10 +90,10 @@ button {
 }
 
 /* Title */
-
+/* changed the header text  text to gradient from black to red*/
 .header {
   /* color: black; */
-    background: -webkit-linear-gradient(black,red);
+  background: -webkit-linear-gradient(black,red);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -187,7 +187,9 @@ button {
 .title {
   color: #FFF;
 }
-
+/* 
+* Changed the background to images for the start, in game, lose and win.
+ */
 .start {
   background-image: url('../images/startGame.jpg');
   background-repeat: no-repeat;
